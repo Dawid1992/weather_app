@@ -1,0 +1,9 @@
+<h1>Welcome to weather app!</h1>
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+<% else %>
+  <p>To continue you must</p>
+  <%= link_to "Sign Up", signup_path %></br>
+  or<br>
+  <%= link_to "Log In", login_path %>
+<% end %>

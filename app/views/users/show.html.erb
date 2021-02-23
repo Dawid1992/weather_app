@@ -1,0 +1,12 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h3>
+    <strong>My Email:</strong>
+    <%= @user.email %>
+  </h3>
+
+  <%= button_to 'Destroy my account', @user, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-warning"%> <br>
+  <%= link_to 'Back', root_url, class:"link-primary"%>
+</div>
+

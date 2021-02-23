@@ -1,0 +1,37 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>My cities</h1>
+
+  <% if @users_cities.empty? %>
+    <p>No cities have been added at this time</p>
+
+  <% else %>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Country code</th>
+        <th colspan="2"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @users_cities.each do |user_city| %>
+        <tr>
+          <td><%= user_city.name.capitalize %></td>
+          <td><%= user_city.country %></td>
+          <td><%= link_to 'Show forecast', users_city_forecast_path(id:user_city.id, users_city_id:user_city.user_id) %></td>
+          <td><%= button_to 'Remove', user_city, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+
+  <br>
+
+  <%= link_to 'Add new city', new_users_city_path, class:"btn btn-success"%>
+</div>
+

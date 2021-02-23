@@ -1,0 +1,32 @@
+<div class="container">
+  <p id=”alert” style="color: red"><%= alert %></p>
+  <h1>Login</h1>
+  <%= form_tag sessions_path do |form|%>
+    <div class="mb-3">
+      <div class="field col col-md-6">
+        <%= label_tag :email %>
+        <%= text_field_tag :email,"" ,class:"form-control"%>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="field col col-md-6">
+        <%= label_tag :password %>
+        <%= password_field_tag :password,"" ,class:"form-control"%>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="actions col">
+        <%= submit_tag "Login" ,class:"btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+
+  <p>If you have not created an account you can do it here</p>
+
+  <%= link_to 'Sign up', signup_path ,class:"btn btn-secondary"%>
+</div>
+
+
+

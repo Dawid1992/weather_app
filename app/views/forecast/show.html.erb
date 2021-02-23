@@ -1,0 +1,29 @@
+<div class="container">
+  <h1> Forecast for: <%= @user_city.name.capitalize %> </h1>
+
+  <% @output.each do |k, v| %>
+    <% if v.is_a?(Hash) || v.is_a?(Array) %>
+      <p class="lvl1"> <%= k %> : </p>
+      <%  v.each do |sk, sv| %>
+        <% if sk.is_a?(Hash) || sk.is_a?(Hash) %>
+          <%  sk.each do |tk, tv| %>
+            <p class="lvl3" style="margin-left: 30px"><%= tk %> : <span> <%= tv %> </span> </p>
+          <% end %>
+        <% else %>
+          <p class="lvl2" style="margin-left: 30px"><%= sk %> : <span> <%= sv %> </span> </p>
+        <% end %>
+      <% end %>
+    <% else %>
+      <p class="lvl1"> <%= k %> : <span> <%= v %> </span> </p>
+    <% end %>
+  <% end %>
+  <br>
+  <%= link_to "Back to my cities", users_cities_path %>
+  <br><br>
+
+</div>
+
+
+
+
+
