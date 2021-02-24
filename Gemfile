@@ -56,3 +56,4 @@ gem 'dry-validation', '~> 1.6'
 gem 'json', '~> 2.5', '>= 2.5.1'
 gem 'jsonapi-serializer', '~> 2.1'
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
+gem 'dotenv-rails', groups: [:development, :test]

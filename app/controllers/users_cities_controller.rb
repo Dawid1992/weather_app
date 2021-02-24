@@ -18,7 +18,8 @@ class UsersCitiesController < ApplicationController
     require 'net/http'
     require 'json'
 
-    @url = "http://api.openweathermap.org/data/2.5/weather?q=#{params[:users_city][:name]},#{params[:users_city][:country]}&appid=17ac356fce697a753b9474155a92c222"
+    @api_key = ENV['API_KEY']
+    @url = "http://api.openweathermap.org/data/2.5/weather?q=#{params[:users_city][:name]},#{params[:users_city][:country]}&appid=#{@api_key}"
     @url = URI.parse(URI.escape(@url))
     @response = Net::HTTP.get(@url)
     @output = JSON.parse(@response)
