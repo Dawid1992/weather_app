@@ -1,24 +1,13 @@
-# README
+Ruby version : 2.7.2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails : 6.1.3
 
-Things you may want to cover:
+DB : sqlite3 v 1.4
 
-* Ruby version
+Server : puma v 5.0
 
-* System dependencies
+Tests : Rspec v 3.1
 
-* Configuration
+run through localhost
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+to see the weather you need to register and add your city
